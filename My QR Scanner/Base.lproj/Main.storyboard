@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uRq-Ns-8NF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner Controller-->
+        <scene sceneID="7kV-Wu-RTJ">
+            <objects>
+                <viewController id="uRq-Ns-8NF" customClass="QRScannerController" customModule="My_QR_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kyL-0c-MdE"/>
+                        <viewControllerLayoutGuide type="bottom" id="4AC-MH-Jwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ILg-HE-6jn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iml-4U-hfc">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Dk-wh-ZRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywx-jl-2EU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iml-4U-hfc" secondAttribute="trailing" constant="-16" id="9gI-Nb-QCd"/>
+                            <constraint firstItem="4AC-MH-Jwd" firstAttribute="top" secondItem="Iml-4U-hfc" secondAttribute="bottom" id="BVn-Jw-ayQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ywx-jl-2EU" secondAttribute="trailing" constant="-16" id="FXe-76-HPi"/>
+                            <constraint firstItem="ywx-jl-2EU" firstAttribute="centerX" secondItem="ILg-HE-6jn" secondAttribute="centerX" id="Fqy-4N-q8R"/>
+                            <constraint firstItem="Iml-4U-hfc" firstAttribute="centerX" secondItem="ILg-HE-6jn" secondAttribute="centerX" id="VNe-Jn-zGZ"/>
+                            <constraint firstItem="ywx-jl-2EU" firstAttribute="top" secondItem="ILg-HE-6jn" secondAttribute="top" id="bh2-y1-2dB"/>
+                            <constraint firstAttribute="bottom" secondItem="ywx-jl-2EU" secondAttribute="bottom" constant="627" id="gW2-u2-vrV"/>
+                            <constraint firstItem="ywx-jl-2EU" firstAttribute="leading" secondItem="ILg-HE-6jn" secondAttribute="leadingMargin" constant="-16" id="mQ2-bm-M03"/>
+                            <constraint firstItem="Iml-4U-hfc" firstAttribute="leading" secondItem="ILg-HE-6jn" secondAttribute="leadingMargin" constant="-16" id="vfU-B4-atb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Iml-4U-hfc" id="R1I-pQ-sgd"/>
+                        <outlet property="topBar" destination="ywx-jl-2EU" id="rwH-HJ-vRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZa-CS-Prr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="150.67466266866569"/>
+        </scene>
+    </scenes>
+</document>
